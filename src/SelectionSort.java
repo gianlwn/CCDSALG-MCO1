@@ -5,7 +5,7 @@ public class SelectionSort {
         sfxArr[minIdx] = temp;
     }
     
-    public static String selectionSort(String[] sfxArr, int size) {
+    public static void selectionSort(String[] sfxArr, int size) {
         for (int i = 0; i < size - 1; i++) {
             int minIdx = i;
 
@@ -18,7 +18,5 @@ public class SelectionSort {
             // swap
             swap(sfxArr, i, minIdx);
         }
-
-        return "";
     }
 }
