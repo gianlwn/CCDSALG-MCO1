@@ -1,22 +1,26 @@
 public class SelectionSort {
-    public static void swap(String[] sfxArr, int i, int minIdx) {
-        String temp = sfxArr[i];
+    public static void swap(String[] unsortedStrings, int[] sfxArr, int i, int minIdx) {
+        String temp = unsortedStrings[i];
+        unsortedStrings[i] = unsortedStrings[minIdx];
+        unsortedStrings[minIdx] = temp;
+
+        int nTemp = sfxArr[i];
         sfxArr[i] = sfxArr[minIdx];
-        sfxArr[minIdx] = temp;
+        sfxArr[minIdx] = nTemp;
     }
     
-    public static void selectionSort(String[] sfxArr, int size) {
+    public static void selectionSort(String[] unsortedStrings, int[] sfxArr, int size) {
         for (int i = 0; i < size - 1; i++) {
             int minIdx = i;
 
             for (int j = i + 1; j < size; j++) {
-                if (sfxArr[j].compareTo(sfxArr[minIdx]) < 0) {
+                if (unsortedStrings[j].compareTo(unsortedStrings[minIdx]) < 0) {
                     minIdx = j;
                 }
             }
 
             // swap
-            swap(sfxArr, i, minIdx);
+            swap(unsortedStrings, sfxArr, i, minIdx);
         }
     }
 }

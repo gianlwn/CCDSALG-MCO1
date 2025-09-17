@@ -9,15 +9,24 @@ public class Driver {
         int size = inputStr.length();
         //System.out.println(n);
 
-        String[] sfxArr = new String[size];
+        String[] unsortedStrings = new String[size];
+        int [] sfxArr1 = new int[size];
 
         for (int i = 0; i < size; i++) {
-            sfxArr[i] = inputStr.substring(i, size);
+            unsortedStrings[i] = inputStr.substring(i, size);
+            sfxArr1[i] = i;
         }
 
         int width = String.valueOf(size - 1).length();
         for (int i = 0; i < size; i++) {
-            System.out.printf("%" + width + "d: %-15s%n", i, sfxArr[i]);
+            System.out.printf("%" + width + "d: %-15s%n", sfxArr1[i], unsortedStrings[i]);
+        }
+
+        SelectionSort.selectionSort(unsortedStrings, sfxArr1, size);
+
+        System.out.println("\nAfter selection sort: ");
+        for (int i = 0; i < size; i++) {
+            System.out.printf("%" + width + "d: %-15s%n", sfxArr1[i], unsortedStrings[i]);
         }
             
         sc.close();
