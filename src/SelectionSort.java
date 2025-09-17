@@ -1,6 +1,6 @@
 public class SelectionSort {
     public static void swap(String[] sfxArr, int i, int minIdx) {
-        String temp = String sfxArr[i];
+        String temp = sfxArr[i];
         sfxArr[i] = sfxArr[minIdx];
         sfxArr[minIdx] = temp;
     }
