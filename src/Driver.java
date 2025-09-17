@@ -9,15 +9,15 @@ public class Driver {
         int size = inputStr.length();
         //System.out.println(n);
 
-        String[] suffixArr = new String[size];
+        String[] sfxArr = new String[size];
 
         for (int i = 0; i < size; i++) {
-            suffixArr[i] = inputStr.substring(i, size);
+            sfxArr[i] = inputStr.substring(i, size);
         }
 
         int width = String.valueOf(size - 1).length();
         for (int i = 0; i < size; i++) {
-            System.out.printf("%" + width + "d: %-15s%n", i, suffixArr[i]);
+            System.out.printf("%" + width + "d: %-15s%n", i, sfxArr[i]);
         }
             
         sc.close();
