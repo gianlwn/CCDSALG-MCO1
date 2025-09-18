@@ -21,7 +21,7 @@ public class DriverQuickSort {
         for (int i = 0; i < size; i++)
             System.out.printf("%" + width + "d: %-15s%n", sfxArr[i], unsortedSfx[i]);
 
-        SelectionSort.selectionSort(unsortedSfx, sortedSfx, sfxArr, size);
+        QuickSort.quickSort(unsortedSfx, sortedSfx, sfxArr, size);
 
         System.out.println("\nSorted suffixes: \n");
         for (int i = 0; i < size; i++)
