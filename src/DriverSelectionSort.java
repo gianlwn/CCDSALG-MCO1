@@ -7,25 +7,24 @@ public class DriverSelectionSort {
         String inputStr = sc.nextLine();
         int size = inputStr.length();
 
-        String[] unsortedSfx = new String[size];
-        String[] sortedSfx = new String[size];
+        String[] suffixesArr = new String[size];
         int [] sfxArr = new int[size];
 
         for (int i = 0; i < size; i++) {
-            unsortedSfx[i] = inputStr.substring(i, size);
+            suffixesArr[i] = inputStr.substring(i, size);
             sfxArr[i] = i;
         }
 
         int width = String.valueOf(size - 1).length();
         System.out.println("\nAll suffixes: \n");
         for (int i = 0; i < size; i++)
-            System.out.printf("%" + width + "d: %-15s%n", sfxArr[i], unsortedSfx[i]);
+            System.out.printf("%" + width + "d: %-15s%n", sfxArr[i], suffixesArr[i]);
 
-        SelectionSort.selectionSort(unsortedSfx, sortedSfx, sfxArr, size);
+        SelectionSort.selectionSort(suffixesArr, sfxArr, size);
 
         System.out.println("\nSorted suffixes: \n");
         for (int i = 0; i < size; i++)
-            System.out.printf("%" + width + "d: %-15s%n", sfxArr[i], sortedSfx[i]);
+            System.out.printf("%" + width + "d: %-15s%n", sfxArr[i], suffixesArr[i]);
 
         System.out.println("\nSuffix array: \n");
         for (int i = 0; i < size; i++)
