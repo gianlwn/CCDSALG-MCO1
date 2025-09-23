@@ -20,8 +20,9 @@ public class QuickSort {
             }
         }
 
-        swap(suffixesArr, sfxArr, i + 1, high);
-        return i + 1;
+        i++;
+        swap(suffixesArr, sfxArr, i, high);
+        return i;
     }
     
     public static void quickSort(String[] suffixesArr, int[] sfxArr, int low, int high) {
