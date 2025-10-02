@@ -1,15 +1,15 @@
 public class SelectionSort {
-    private static void swap(String[] suffixesArr, int[] sfxArr, int i, int minIdx) {
+    private static void swap(String[] suffixesArr, int[] indicesArr, int i, int minIdx) {
         String temp = suffixesArr[i];
         suffixesArr[i] = suffixesArr[minIdx];
         suffixesArr[minIdx] = temp;
 
-        int nTemp = sfxArr[i];
-        sfxArr[i] = sfxArr[minIdx];
-        sfxArr[minIdx] = nTemp;
+        int nTemp = indicesArr[i];
+        indicesArr[i] = indicesArr[minIdx];
+        indicesArr[minIdx] = nTemp;
     }
     
-    public static void selectionSort(String[] suffixesArr, int[] sfxArr, int size) {
+    public static void selectionSort(String[] suffixesArr, int[] indicesArr, int size) {
         for (int i = 0; i < size - 1; i++) {
             int minIdx = i;
 
@@ -18,7 +18,7 @@ public class SelectionSort {
                     minIdx = j;
 
             // swap
-            swap(suffixesArr, sfxArr, i, minIdx);
+            swap(suffixesArr, indicesArr, i, minIdx);
         }
     }
 }
