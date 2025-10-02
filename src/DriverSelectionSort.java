@@ -36,7 +36,6 @@ public class DriverSelectionSort {
                 System.out.print(indicesArr[i] + ", ");
 
         System.out.printf("\n\nTime it took to sort: %.3f milliseconds\n", (endTime - startTime) / 1e6);
-        System.out.printf("Time it took to sort: %.3f seconds\n", (endTime - startTime) / 1e9);
             
         sc.close();
     }
