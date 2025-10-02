@@ -20,7 +20,9 @@ public class DriverQuickSort {
         for (int i = 0; i < size; i++)
             System.out.printf("%" + width + "d: %-15s%n", indicesArr[i], suffixesArr[i]);
 
+        long startTime = System.nanoTime();
         QuickSort.quickSort(suffixesArr, indicesArr, 0, size - 1);
+        long endTime = System.nanoTime();
 
         System.out.println("\nSorted suffixes: \n");
         for (int i = 0; i < size; i++)
@@ -32,6 +34,8 @@ public class DriverQuickSort {
                 System.out.print(indicesArr[i]);
             else
                 System.out.print(indicesArr[i] + ", ");
+
+        System.out.printf("\n\nExecution Time: %.3f milliseconds\n", (endTime - startTime) / 1e6);
             
         sc.close();
     }
