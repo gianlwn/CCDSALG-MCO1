@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class DriverQuickSort {
     public static void main(String[] args) {
+        long startTime = System.nanoTime();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String inputStr = sc.nextLine();
@@ -20,9 +21,9 @@ public class DriverQuickSort {
         for (int i = 0; i < size; i++)
             System.out.printf("%" + width + "d: %-15s%n", indicesArr[i], suffixesArr[i]);
 
-        long startTime = System.nanoTime();
+        long startSortTime = System.nanoTime();
         QuickSort.quickSort(suffixesArr, indicesArr, 0, size - 1);
-        long endTime = System.nanoTime();
+        long endSortTime = System.nanoTime();
 
         System.out.println("\nSorted suffixes: \n");
         for (int i = 0; i < size; i++)
@@ -34,8 +35,10 @@ public class DriverQuickSort {
                 System.out.print(indicesArr[i]);
             else
                 System.out.print(indicesArr[i] + ", ");
+        long endTime = System.nanoTime();
 
-        System.out.printf("\n\nTime it took to sort: %.3f milliseconds\n", (endTime - startTime) / 1e6);
+        System.out.printf("\n\nTotal execution time of the program: %.3f seconds\n", (endTime - startTime) / 1e9);
+        System.out.printf("Time it took to sort: %.3f milliseconds\n", (endSortTime - startSortTime) / 1e6);
             
         sc.close();
     }
