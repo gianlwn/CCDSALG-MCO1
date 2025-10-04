@@ -18,7 +18,8 @@ public class SelectionSort {
                     minIdx = j;
 
             // swap
-            swap(suffixesArr, indicesArr, i, minIdx);
+            if (minIdx != i)
+                swap(suffixesArr, indicesArr, i, minIdx);
         }
     }
 }
