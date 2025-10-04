@@ -8,7 +8,7 @@ public class DriverQuickSort {
         int size = inputStr.length();
 
         String[] suffixesArr = new String[size];
-        int [] indicesArr = new int[size];
+        int[] indicesArr = new int[size];
 
         for (int i = 0; i < size; i++) {
             suffixesArr[i] = inputStr.substring(i, size);
