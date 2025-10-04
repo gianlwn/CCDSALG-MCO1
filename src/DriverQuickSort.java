@@ -35,7 +35,7 @@ public class DriverQuickSort {
             else
                 System.out.print(indicesArr[i] + ", ");
 
-        System.out.printf("Time it took to sort: %.3f milliseconds\n", (endSortTime - startSortTime) / 1e6);
+        System.out.printf("\nTime it took to sort: %.3f milliseconds\n", (endSortTime - startSortTime) / 1e6);
             
         sc.close();
     }
